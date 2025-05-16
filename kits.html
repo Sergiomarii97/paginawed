@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catálogo de Kits - Proteckit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #222;
+    }
+
+    header {
+      background-color: #f4a300;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #444;
+    }
+
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .producto {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .producto:hover {
+      transform: translateY(-5px);
+    }
+
+    .producto img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .producto h3 {
+      margin: 0.5rem 0;
+      color: #222;
+    }
+
+    .producto p {
+      color: #555;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .producto button {
+      background-color: #222;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .producto button:hover {
+      background-color: #444;
+    }
+
+    footer {
+      background-color: #f4a300;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-boxes"></i> Catálogo de Kits</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="kits.html">Kits</a>
+      <a href="simulador.html">Simulador</a>
+      <a href="carrito.html">Carrito</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Elige tu Kit de Protección</h2>
+    <div class="productos">
+      <div class="producto">
+        <img src="img/imagen1.jpg" alt="Kit Construcción" />
+        <h3>Kit Construcción</h3>
+        <p>$80.000 COP</p>
+        <button onclick="agregarAlCarrito('Kit Construcción', 80000)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="img/imagen2.jpg" alt="Kit Salud" />
+        <h3>Kit Salud</h3>
+        <p>$75.000 COP</p>
+        <button onclick="agregarAlCarrito('Kit Salud', 75000)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="img/imagen3.jpg" alt="Kit Limpieza" />
+        <h3>Kit Limpieza</h3>
+        <p>$70.000 COP</p>
+        <button onclick="agregarAlCarrito('Kit Limpieza', 70000)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="img/cascos.jpg" alt="Kit cascos" />
+        <h3>Cascos</h3>
+        <p>$40.000 COP</p>
+        <button onclick="agregarAlCarrito('Kit cascos', 40000)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="img/gafas.jpg" alt="Kit gafas" />
+        <h3>Gafas</h3>
+        <p>$15.000 COP</p>
+        <button onclick="agregarAlCarrito('Kit gafas', 15000)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="img/Guantes.jpg" alt="Guantes" />
+        <h3>Guantes</h3>
+        <p>$10.000 COP</p>
+        <button onclick="agregarAlCarrito('Kit guantes', 10000)">Agregar al carrito</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Proteckit S.A.S. | contacto@proteckit.com</p>
+  </footer>
+  <script>
+    function agregarAlCarrito(nombre, precio) {
+      let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      carrito.push({ nombre, precio });
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+      alert(`${nombre} agregado al carrito.`);
+    }
+  </script>
+</body>
+</html>

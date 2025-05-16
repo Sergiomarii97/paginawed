@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proteckit - Inicio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primario: #f4a300;
+      --oscuro: #222;
+      --gris: #444;
+      --fondo: #f9f9f9;
+      --acento: #ffe9b0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background-color: var(--fondo);
+      color: var(--oscuro);
+    }
+
+    header {
+      background-color: var(--primario);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin: 0.5rem 0 1rem;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .bienvenida {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 3rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .columna-img {
+      flex: 0 0 300px;
+    }
+
+    .imagen-portada {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .columna-texto {
+      flex: 1;
+      text-align: left;
+    }
+
+    .columna-texto h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .columna-texto p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .info-seccion {
+      margin-top: 3rem;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .info-seccion h3 {
+      color: var(--primario);
+      margin-top: 1.5rem;
+      font-size: 1.4rem;
+    }
+
+    .info-seccion p,
+    .info-seccion li {
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .info-seccion ul {
+      padding-left: 1.5rem;
+    }
+
+    .cta-seccion {
+      margin-top: 3rem;
+      text-align: center;
+      background: var(--acento);
+      padding: 2rem;
+      border-radius: 12px;
+    }
+
+    .cta-seccion h3 {
+      margin-bottom: 1rem;
+    }
+
+    .cta-seccion a {
+      display: inline-block;
+      background-color: var(--primario);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .cta-seccion a:hover {
+      background-color: var(--oscuro);
+    }
+
+    footer {
+      background-color: var(--primario);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-shield-alt"></i> Proteckit</h1>
+    <p>Protegemos tu labor, cuidamos tu vida</p>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="kits.html">Kits</a>
+      <a href="simulador.html">Simulador</a>
+      <a href="carrito.html">Carrito</a>
+    </nav>
+  </header>
+  <main>
+    <section class="bienvenida">
+      <div class="columna-img">
+        <img src="img/imagenP.jpg" alt="Imagen principal de Proteckit" class="imagen-portada" />
+      </div>
+      <div class="columna-texto">
+        <h2>Bienvenido a Proteckit</h2>
+        <p>Tu seguridad laboral es nuestra prioridad. Encuentra el kit EPP ideal para ti o tu empresa.</p>
+      </div>
+    </section>
+
+    <section class="info-seccion">
+      <h3>¿Quiénes somos?</h3>
+      <p>Somos una empresa colombiana dedicada a ofrecer soluciones integrales en seguridad industrial. Nuestra misión es proteger a los trabajadores con productos de alta calidad y durabilidad.</p>
+
+      <h3>¿Qué ofrecemos?</h3>
+      <ul>
+        <li>Kits de protección personalizados según la actividad laboral</li>
+        <li>Materiales certificados y resistentes</li>
+        <li>Diseños ergonómicos, cómodos y funcionales</li>
+        <li>Asesoría profesional para empresas e instituciones</li>
+      </ul>
+
+      <h3>Nuestros valores</h3>
+      <p>Nos guiamos por la innovación, el compromiso con la vida, la excelencia en nuestros procesos y la responsabilidad social. Cada kit representa nuestro empeño por construir un entorno laboral más seguro.</p>
+
+      <h3>Contacto</h3>
+      <p><strong>Email:</strong> contacto@proteckit.com<br><strong>Teléfono:</strong> +57 300 123 4567</p>
+    </section>
+
+    <section class="cta-seccion">
+      <h3>¿Listo para proteger tu equipo de trabajo?</h3>
+      <a href="kits.html">Ver nuestros kits disponibles</a>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Proteckit S.A.S. | contacto@proteckit.com</p>
+  </footer>
+</body>
+</html>
